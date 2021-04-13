@@ -12,14 +12,14 @@ Desenvolver um sistema para cadastro de tarefas.
 	
 *Requisitos:*
 
-	- Home page igual a página do github
+	X - Home page igual a página do github
 	- navbar com botão de entrar ou nome do usuário se estiver logado;
-	- form de cadastro por cima do banner;
-	- form de cadastro deve possuir os campos (nome, email, data de nascimento, cpf, cep, endereço, numero, senha);
+	X- form de cadastro por cima do banner;
+	X- form de cadastro deve possuir os campos (nome, email, data de nascimento, cpf, cep, endereço, numero, senha);
 	- os campos nome, email, data de nascimento e senha são obrigatórios os outros são opcionais;
-	- apenas usuários maiores de 12 anos podem se cadastrar;
-	- o campo de CPF deve possuir mascara e validação de CPF;
-	- o CEP deve ser validado e possuir autocomplete de endereço;
+	X- apenas usuários maiores de 12 anos podem se cadastrar;
+	X- o campo de CPF deve possuir mascara e validação de CPF;
+	X- o CEP deve ser validado e possuir autocomplete de endereço;
 	
 *Após logar no sistema:*
 
