@@ -1,0 +1,167 @@
+body {
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #050D1F;
+}
+
+.imgFilter {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	position: absolute;
+	background-image: url("https://github.githubassets.com/images/modules/site/home/hero-glow.svg");
+	z-index: 1;
+	background-size: 150%;
+	background-position: 30% 70%;
+
+}
+
+.homeContainer {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+
+	position: absolute;
+}
+
+.homeContentBox {
+	width: 100%;
+	max-width: 1280px;
+	height: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	position: relative;
+	transform: translateY(-15%);
+
+	padding: 0px 32px;
+}
+
+.homeTextContainer {
+	width: 100%;
+	max-width: 700px;
+	position: absolute;
+	left: 0;
+	z-index: 1;
+	padding-left: 32px;
+}
+
+.homeTextContainer h1 {
+	font-family: "Alliance No.1", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 4.5rem;
+	font-weight: 800;
+	font-style: normal;
+	color: white;
+	line-height: 69px;
+	margin-bottom: 24px;
+}
+
+.homeTextContainer p {
+	font-family: "Alliance No.1", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+	font-size: 1.5rem;
+	font-weight: 400;
+	font-style: normal;
+	color: #8193b2;
+	line-height: 36px;
+}
+
+.homeGlobeContainer {
+	width: 100%;
+	left: 0;
+	z-index: -1;
+	padding-left: 32px;
+}
+
+.homeGlobeContainer video{
+	height: 90vh;
+	transform: translateX(60%);
+
+	z-index: -1;
+}
+
+.waveContainer img{
+
+	height: 500px;
+	z-index: 5;
+
+	position: absolute;
+	right: 15%;
+	bottom: 0;
+	
+}
+
+.wave {
+  position: absolute;
+  height: 80px;
+  width: 100%;
+  background: #fff;
+  bottom: 0;
+	z-index: 5;
+
+}
+
+.wave::before, .wave::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 30%;
+	z-index: 5;
+}
+
+.wave::before {
+  width: 55%;
+  height: 109%;
+  background-color: #fff;
+  right: -1.5%;
+  bottom: 40%;
+}
+.wave::after {
+  width: 55%;
+  height: 100%;
+  background-color: #fff;
+  left: -4.5%;
+  bottom: 20%;
+}
+
+@media(max-width: 1580px) {
+	.homeGlobeContainer video{
+		height: 85vh;
+		transform: translateX(55%);
+	}
+}
+
+@media(max-width: 1350px) {
+
+	.homeTextContainer {
+		max-width: 650px;
+	}
+
+	.homeTextContainer h1{
+		font-size: 4rem;
+	}
+
+	.homeGlobeContainer video{
+		height: 80vh;
+		transform: translateX(60%);
+	}
+}
+
+@media(max-width: 1350px) {
+
+	.homeTextContainer h1{
+		font-size: 4rem;
+	}
+
+	.homeGlobeContainer video{
+		height: 80vh;
+		transform: translateX(55%);
+	}
+}
+
+
