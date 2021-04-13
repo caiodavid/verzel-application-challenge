@@ -4,10 +4,12 @@ import storage from 'redux-persist/lib/storage'
 
 import loginModalReducer from './LoginModal/LoginModal.reducer';
 import registerModalReducer from './RegisterModal/RegisterModal.reducer';
+import UsersReducer from './Users/Users.reducer';
 
 const rootReducer = combineReducers({
 	loginModal: loginModalReducer,
-	registerModal: registerModalReducer
+	registerModal: registerModalReducer,
+	users: UsersReducer
 })
 
 const persistConfig = {

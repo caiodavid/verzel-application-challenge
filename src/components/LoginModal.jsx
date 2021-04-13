@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { FiX } from "react-icons/fi";
 import logo from "../assets/Logo_texto_branco.png";
@@ -8,20 +9,43 @@ import { toggleLoginModalVisibility } from "../store/LoginModal/LoginModal.actio
 import { selectLoginModalVisibility } from "../store/LoginModal/LoginModal.selectors";
 import { toggleRegisterModalVisibility } from "../store/RegisterModal/RegisterModal.actions";
 import { selectRegisterModalVisibility } from "../store/RegisterModal/RegisterModal.selectors";
+import { userLogin } from "../store/Users/Users.actions";
+import { selectUsers } from "../store/Users/Users.selectors";
 
 export function LoginModal() {
   const dispach = useDispatch();
   const isLoginModalVisible = useSelector(selectLoginModalVisibility);
   const isRegisterModalVisible = useSelector(selectRegisterModalVisibility);
+  const registeredUsers = useSelector(selectUsers);
+
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = (e) => {
     e.preventDefault();
-    console.log("ola");
+		
+
+    if (email === "" || password === "") {
+      alert("Preencha todos os campos!");
+    } else {
+      const compatibleUser = registeredUsers.filter(
+        (user) => user.email === email
+      );
+
+			console.log(compatibleUser)
+
+      if (compatibleUser.length < 1) {
+        alert("Usuário não encontrado!");
+      } else if (password !== compatibleUser[0].password) {
+        alert("Senha icorreta!");
+      } else {
+        dispach(userLogin(compatibleUser[0].id));
+      }
+    }
   };
 
   const toggleModals = (e) => {
-		console.log('hi')
-    dispach(toggleLoginModalVisibility(isLoginModalVisible)) ;
+    dispach(toggleLoginModalVisibility(isLoginModalVisible));
     dispach(toggleRegisterModalVisibility(isRegisterModalVisible));
   };
 
@@ -42,10 +66,18 @@ export function LoginModal() {
           }
         />
         <form>
-          <label htmlFor="user">Usuário ou email:</label>
-          <input type="text" id="user" />
+          <label htmlFor="user">Email:</label>
+          <input
+            type="text"
+            id="user"
+            onChange={(e) => setEmail(e.target.value)}
+          />
           <label htmlFor="password">Senha:</label>
-          <input type="password" id="password" />
+          <input
+            type="password"
+            id="password"
+            onChange={(e) => setPassword(e.target.value)}
+          />
         </form>
         <button onClick={handleLogin}>Entrar</button>
       </div>

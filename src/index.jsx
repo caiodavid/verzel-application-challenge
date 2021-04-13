@@ -4,7 +4,8 @@ import ReactDOM from "react-dom";
 import { store, persistor } from "./store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
-import Home from "./pages/Home";
+
+import App from './App'
 
 
 
@@ -12,7 +13,7 @@ ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Home />
+        <App />
       </PersistGate>
     </Provider>
   </React.StrictMode>,

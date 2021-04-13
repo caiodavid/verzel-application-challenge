@@ -10,6 +10,7 @@ import styles from "../styles/components/RegisterModal.module.css";
 
 import { toggleRegisterModalVisibility } from "../store/RegisterModal/RegisterModal.actions";
 import { selectRegisterModalVisibility } from "../store/RegisterModal/RegisterModal.selectors";
+import { createUser } from "../store/Users/Users.actions"
 
 export function RegisterModal() {
   const dispach = useDispatch();
@@ -144,21 +145,27 @@ export function RegisterModal() {
   const handleRegister = (e) => {
     e.preventDefault();
 
-		if(!isCpfValid) {
-			setCpf('')
-		}
-
-		if(!isCepValid) {
-			setCep('')
-		}
+    const userData = {
+			id: Math.random(),
+      name: name,
+      email: email,
+      password: password,
+      birth: birth,
+      cpf: isCpfValid ? cpf : '',
+      cep: isCepValid ? cep : '',
+      address: address,
+      addresNumber: addresNumber,
+      isLogged: false,
+    };
 
     if (ageCalculator(birth) <= 12) {
       alert("Apenas usuários maiores de 12 anos podem se cadastrar");
     } else if (name === "" || email === "" || password === "" || birth === "") {
       alert(`Por favor, preencha todos os campos obrigatórios.`);
     } else {
-			console.log('cadastrado');
-		}
+      console.log("cadastrado");
+			dispach(createUser(userData))
+    }
   };
 
   return (
