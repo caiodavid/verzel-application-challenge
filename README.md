@@ -10,7 +10,18 @@
 </p>
 
 <p align="center">
-	<img width="400px" src="src/assets/to_git/home_page.gif">
+	<img width="100%" src="src/assets/to_git/home_page.gif">
+</p>
+
+<p align="center">
+	<img width="100%" src="src/assets/to_git/complete_task.gif">
+</p>
+
+<p align="center">
+	<img width="450px" src="src/assets/to_git/add_task.gif">
+	<img width="450px" src="src/assets/to_git/delete_task.gif">
+	<img width="450px" src="src/assets/to_git/see_more.gif">
+	<img width="450px" src="src/assets/to_git/edit_task.gif">
 </p>
 
 ## :page_with_curl: Descrição do projeto
@@ -61,3 +72,13 @@ tarefa;
 - Todos os dados devem ser persistidos no storage do browser;
 - Escrever no readme os detalhes para setup da aplicação;
 - Prazo para entrega 5 dias corridos a partir da data de recebimento do mesmo;
+
+## Autor
+---
+
+<a href="https://github.com/caiodavid">
+<img border-radius = "50%" src="https://avatars.githubusercontent.com/u/62821483?v=4" width="100px;" alt=""/>
+<br />
+<sub><b>Caio David de Souza</b></sub></a> <a href="https://github.com/caiodavid" title="GitHub">🚀</a>
+
+Feito com ❤️ por Caio 👋🏽 
