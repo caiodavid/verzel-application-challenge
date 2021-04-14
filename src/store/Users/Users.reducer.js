@@ -1,17 +1,3 @@
-/* const INICIAL_USERS_STATE = {
-	users: null{
-		name: null,
-		email: null,
-		password:null ,
-		birth:null ,
-		cpf:null ,
-		cep:null ,
-		address:null ,
-		addresNumber:null ,
-		isLogged: false
-	}
-} */
-
 export default function (state = [], action) {
 	switch (action.type) {
 

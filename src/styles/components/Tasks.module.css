@@ -1,0 +1,113 @@
+.tasksContainer {
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 15px 0px;
+}
+
+.tasksHeader {
+	display: flex;
+	gap: 20px;
+
+	position: absolute;
+	right: 35px;
+}
+
+.tasksHeader a{
+	font-weight: 600;
+	font-size: 18px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.tasksHeader a:hover{
+	color: var(--text-highlight);
+	text-decoration: underline;
+}
+
+.tasksList {
+	width: 100%;
+	height: 100vh;
+
+	padding: 120px 80px;
+	overflow-y: auto;
+
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 30px;
+}
+
+.taskBox {
+	width: 450px;
+	height: 200px;
+
+	display: flex;
+
+	padding: 15px;
+
+	background: var(--box-background);
+	border: 1px solid var(--gray-line);
+	border-radius: 8px;
+}
+
+.taskBoxContent {
+	width: 350px;
+	height: 100%;
+
+	display: flex;
+	flex-direction: column;
+	
+	padding: 10px 15px 0px 0px;
+	align-items: center;
+	justify-content: space-between;
+
+	border-right: 1px solid var(--gray-line);
+}
+
+.taskBoxContent button {
+	width: 100%;
+	outline: none;
+  padding: 8px 12px;
+
+  font-size: 14;
+  font-weight: 500;
+
+  background: var(--green-button);
+  color: var(--text);
+
+  border: 0.5px double rgb(170, 245, 170);
+  border-radius: 6px;
+
+  transition: 0.5s;
+}
+
+.taskBoxContent button:hover {
+  filter: brightness(1.2);
+}
+
+.taskBoxActions {
+	width: 70px;
+	display: flex;
+	padding-left: 15px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.taskBoxActions svg {
+	font-size: 22px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.taskBoxActions svg:hover {
+	color: var(--text-highlight);
+}
+
+.taskBoxActions svg:last-child:hover {
+	color: red;
+}

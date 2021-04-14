@@ -9,7 +9,7 @@ import { Navbar } from "../components/Navbar";
 
 function Home() {
   return (
-    <>
+    <div className={styles.homePageBody}>
       <div className={styles.imgFilter} />
       <LoginModal />
       <RegisterModal />
@@ -40,7 +40,7 @@ function Home() {
         <div className={styles.wave}></div>
         <img src={astro} alt="" />
       </section>
-    </>
+    </div>
   );
 }
 

@@ -1,7 +1,7 @@
-body {
+.homePageBody {
 	width: 100vw;
 	height: 100vh;
-	overflow: hidden;
+	overflow: hidden !important;
 	background-color: #050D1F;
 }
 
@@ -110,15 +110,15 @@ body {
   content: "";
   display: block;
   position: absolute;
-  border-radius: 100% 30%;
+  border-radius: 100% 65%;
 	z-index: 5;
 }
 
 .wave::before {
   width: 55%;
-  height: 109%;
+  height: 100%;
   background-color: #fff;
-  right: -1.5%;
+  right: 0%;
   bottom: 40%;
 }
 .wave::after {

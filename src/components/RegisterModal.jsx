@@ -163,8 +163,8 @@ export function RegisterModal() {
     } else if (name === "" || email === "" || password === "" || birth === "") {
       alert(`Por favor, preencha todos os campos obrigatórios.`);
     } else {
-      console.log("cadastrado");
 			dispach(createUser(userData))
+			dispach(toggleRegisterModalVisibility(isRegisterModalVisible))
     }
   };
 

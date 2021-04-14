@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router";
 import { useDispatch, useSelector } from "react-redux";
 import { FiX } from "react-icons/fi";
 import logo from "../assets/Logo_texto_branco.png";
@@ -13,6 +14,7 @@ import { userLogin } from "../store/Users/Users.actions";
 import { selectUsers } from "../store/Users/Users.selectors";
 
 export function LoginModal() {
+  const history = useHistory();
   const dispach = useDispatch();
   const isLoginModalVisible = useSelector(selectLoginModalVisibility);
   const isRegisterModalVisible = useSelector(selectRegisterModalVisibility);
@@ -23,7 +25,6 @@ export function LoginModal() {
 
   const handleLogin = (e) => {
     e.preventDefault();
-		
 
     if (email === "" || password === "") {
       alert("Preencha todos os campos!");
@@ -32,14 +33,14 @@ export function LoginModal() {
         (user) => user.email === email
       );
 
-			console.log(compatibleUser)
-
       if (compatibleUser.length < 1) {
         alert("Usuário não encontrado!");
       } else if (password !== compatibleUser[0].password) {
         alert("Senha icorreta!");
       } else {
         dispach(userLogin(compatibleUser[0].id));
+        dispach(toggleLoginModalVisibility(isLoginModalVisible));
+        history.push("tasks");
       }
     }
   };

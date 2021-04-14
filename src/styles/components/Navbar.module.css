@@ -19,7 +19,20 @@ nav {
 	z-index: 1;
 }
 
-.navbarContainer img {
+.navbarLoggedContainer {
+	width: 100vw;
+
+  height: 62px;
+  padding: 16px 32px;
+  background: var(--navbar);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbarContainer img,
+.navbarLoggedContainer img {
   height: 50px;
 }
 

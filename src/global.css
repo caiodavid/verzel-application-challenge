@@ -4,6 +4,9 @@ body {
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
 }
 
 * {
@@ -19,7 +22,7 @@ body {
 	--box-background: #0D1117;
 	--grey-button: #21262d;
 	--green-button: #238636;
-	--gray-line: #767676;
+	--gray-line: #76767674;
 	--text: #f0f6fc;
 	--text-highlight: #58A6FF;
 	--title: #2e384d;
