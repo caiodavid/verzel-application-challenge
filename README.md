@@ -4,7 +4,7 @@
 <p align="center">
   <a href="#page_with_curl-descrição-do-projeto">Descrição do projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bulb-proposta-de-solução">Proposta de soluçao</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#hammer-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hammer-tecnologias-utilizadas">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#computer-como-rodar-o-projeto">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bookmark_tabs-requisitos-passados-pela-verzel">Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
 </p>
@@ -19,8 +19,7 @@ Desenvolver um sistema para cadastro de tarefas.
 - [React](https://reactjs.org)
 - [Node.js](https://nodejs.org/en/)
 - [Redux](https://redux.js.org/)
-- [Redux Persist](https://github.com/rt2zz/redux-persist)
-- [VS Code][vc]  
+- [Redux Persist](https://github.com/rt2zz/redux-persist)  
 
 ## :computer: Como rodar o projeto
 
