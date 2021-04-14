@@ -18,10 +18,10 @@
 </p>
 
 <p align="center">
-	<img width="450px" src="src/assets/to_git/add_task.gif">
-	<img width="450px" src="src/assets/to_git/delete_task.gif">
-	<img width="450px" src="src/assets/to_git/see_more.gif">
-	<img width="450px" src="src/assets/to_git/edit_task.gif">
+	<img width="400px" src="src/assets/to_git/add_task.gif">
+	<img width="400px" src="src/assets/to_git/delete_task.gif">
+	<img width="400px" src="src/assets/to_git/see_more.gif">
+	<img width="400px" src="src/assets/to_git/edit_task.gif">
 </p>
 
 ## :page_with_curl: Descrição do projeto
