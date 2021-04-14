@@ -7,11 +7,13 @@ import registerModalReducer from './RegisterModal/RegisterModal.reducer';
 import editTaskModalReducer from './EditTaskModal/EditTaskModal.reducer'
 import usersReducer from './Users/Users.reducer';
 import tasksReducer from './Tasks/Tasks.reducer'
+import ShowMoreModalReducer from './ShowMoreModal/ShowMoreModal.reducer';
  
 const rootReducer = combineReducers({
 	loginModal: loginModalReducer,
 	registerModal: registerModalReducer,
 	editTaskModal: editTaskModalReducer,
+	showMoreModal: ShowMoreModalReducer,
 	users: usersReducer,
 	tasks: tasksReducer,
 })

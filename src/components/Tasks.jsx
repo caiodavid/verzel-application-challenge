@@ -11,18 +11,14 @@ import {
   returnTask,
 } from "../store/Tasks/Tasks.actions";
 import { EditTaskModal } from "./EditTaskModal";
+import { ShowMoreModal } from "./ShowMoreModal";
 import { toggleActiveEditModal } from "../store/EditTaskModal/EditTaskModal.actions";
+import { toggleActiveShowMoreModal } from "../store/ShowMoreModal/ShowMoreModal.actions";
 
 export function Tasks() {
   const dispach = useDispatch();
   const currentUser = useSelector(selectCurrentUser);
   const allTasks = useSelector(selectAllTasks);
-
-  const [editTaskId, setEditTaskId] = useState(0);
-  const [editTaskName, setEditTaskName] = useState("");
-  const [editTaskDeliveryDate, setEditTaskDeliveryDate] = useState("");
-  const [editTaskConclusionDate, setEditTaskConclusionDate] = useState("");
-  const [editTaskIsVisible, setEditTaskIsVisible] = useState(false);
 
   const [showFinishedTasks, setShowFinishedTasks] = useState(false);
 
@@ -72,9 +68,25 @@ export function Tasks() {
     dispach(toggleActiveEditModal(editTaskData));
   }
 
+  function toggleShowMoreModalVisibility(
+    id,
+    taskName,
+    deliveryDate,
+    conclusionDate
+  ) {
+    const taskData = {
+      taskId: id,
+      taskName: taskName,
+      deliveryDate: deliveryDate,
+      conclusionDate: conclusionDate,
+    };
+    dispach(toggleActiveShowMoreModal(taskData));
+  }
+
   return (
     <div className={styles.tasksContainer}>
       <EditTaskModal />
+			<ShowMoreModal />
       <div className={styles.tasksHeader}>
         <a onClick={() => setShowFinishedTasks(false)}>To-Do</a>
         <p>|</p>
@@ -99,7 +111,16 @@ export function Tasks() {
               )}
             </div>
             <div className={styles.taskBoxActions}>
-              <FiMaximize2 />
+              <FiMaximize2
+                onClick={() =>
+                  toggleShowMoreModalVisibility(
+                    task.id,
+                    task.taskName,
+                    task.taskDeliveryDate,
+                    task.taskConclusionDate
+                  )
+                }
+              />
               <FiEdit
                 onClick={() =>
                   toggleEditModalVisibility(

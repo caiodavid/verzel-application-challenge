@@ -25,7 +25,7 @@ Desenvolver um sistema para cadastro de tarefas.
 
 	X- deve exibir uma listagem de tarefas cadastradas;
 	X- deve possuir um botão para cadastro de novas tarefas;
-	- cada registro da listagem deve possuir as ações (editar, excluir, visualizar, concluir)
+	X- cada registro da listagem deve possuir as ações (editar, excluir, visualizar, concluir)
 	X- a ação de concluir deve ser apenas para tarefas em aberto (não finalizadas), deve solicitar confirmação para concluir uma
 	tarefa;
 	X- deve solicitar confirmação do usuário para excluir uma tarefa;

@@ -1,0 +1,53 @@
+.showMoreModalContainer {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #090c10d2;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  z-index: 10;
+}
+
+.showMoreModalBox {
+  width: 600px;
+
+  padding: 15px;
+  background: var(--box-background);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  border: 2px solid var(--gray-line);
+}
+
+.showMoreModalBox svg {
+  align-self: flex-end;
+  font-size: 32px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.showMoreModalBox svg:hover {
+  color: var(--text-highlight);
+}
+
+.showMoreInfosBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.showMoreInfo h1 {
+  color: var(--text-highlight);
+  margin-bottom: 5px;
+}
