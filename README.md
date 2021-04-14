@@ -44,7 +44,6 @@ Desenvolver um sistema para cadastro de tarefas.
 2. `$ yarn` para instalar as dependências do projeto
 3. `$ yarn start`
 4. Acessar [http://localhost:3000](http://localhost:3000) no navegador
-<<<<<<< HEAD
 	
 ## :bookmark_tabs: Requisitos passados pela Verzel
 ### HomePage:
