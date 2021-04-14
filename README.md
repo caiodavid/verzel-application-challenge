@@ -2,14 +2,12 @@
 <h1 align="center">Verzel | To-Do List :ballot_box_with_check:</h1> 
 
 <p align="center">
-  <a href="#page-with-curl-descrição-do-projeto">Descrição do projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#computer-technologies">Technologies</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#information_source-how-to">How to</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#page_with_curl-descrição-do-projeto">Descrição do projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#bulb-proposta-de-solução">Proposta de soluçao</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#hamer-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#computer-como-rodar-o-projeto">Como rodar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#bookmark_tabs-requisitos-passados-pela-verzel">Requisitos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#busts_in_silhouette-contribute">Contribute</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-license">License</a>
 </p>
-
 
 ## :page_with_curl: Descrição do projeto
 Teste prático pela Verzel no processo de seleção com o objetivo de validar os conhecimentos técnicos em desenvolvimento frontend, lógica de programação e entendimento da demanda proposta.
@@ -17,10 +15,21 @@ Teste prático pela Verzel no processo de seleção com o objetivo de validar os
 ## :bulb: Proposta de solução
 Desenvolver um sistema para cadastro de tarefas.
 
-## :computer: Tecnologias utilizadas
-- React
-- Redux
-- Redux Persist 
+## :hammer: Tecnologias utilizadas
+- [React](https://reactjs.org)
+- [Node.js](https://nodejs.org/en/)
+- [Redux](https://redux.js.org/)
+- [Redux Persist](https://github.com/rt2zz/redux-persist)
+- [VS Code][vc]  
+
+## :computer: Como rodar o projeto
+
+**Você pode clonar o projeto e rodá-lo localmente seguindo os passos abaixo**
+
+1. `$ git clone https://github.com/caiodavid/verzel-application-challenge.git` para clonar o projeto
+2. `$ yarn` para instalar as dependências do projeto
+3. `$ yarn start`
+4. Acessar [http://localhost:3000](http://localhost:3000) no navegador
 	
 ## :bookmark_tabs: Requisitos passados pela Verzel
 ### HomePage:
