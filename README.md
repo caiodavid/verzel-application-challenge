@@ -1,14 +1,16 @@
-Teste Prático Frontend Jr
-A proposta desse teste é validar os conhecimentos técnicos em desenvolvimento frontend, lógica de programação e
-entendimento da demanda do candidato.
-Proposta de solução:
+
+<h1 align="center">Verzel | To-Do List :ballot_box_with_check:</h1> 
+
+## :page_with_curl: Descrição do Projeto
+Teste prático pela Verzel no processo de seleção com o objetivo de validar os conhecimentos técnicos em desenvolvimento frontend, lógica de programação e entendimento da demanda proposta.
+
+## :bulb: Proposta de solução:
 Desenvolver um sistema para cadastro de tarefas.
 
-*Tecnologias obrigatórias:*
-
-	- React
-	- Redux
-	- Redux persist 
+## :computer: Tecnologias utilizadas:
+- React
+- Redux
+- Redux persist 
 	
 *Requisitos:*
 
