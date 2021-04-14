@@ -8,9 +8,15 @@ export default function (state = [], action) {
 			return state.filter(task => task.id !== action.payload)
 
 		case 'EDIT_TASK':
+			console.log(action.payload[0]);
 			return state.map(task =>
-				task.id === action.payload
-					? { ...task, isLogged: false }
+				task.id === action.payload[0]
+					? {
+						...task,
+						taskName: action.payload[1],
+						taskDeliveryDate: action.payload[2],
+						taskConclusionDate: action.payload[3]
+					}
 					: task
 			)
 

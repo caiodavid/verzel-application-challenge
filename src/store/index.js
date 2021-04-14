@@ -4,12 +4,14 @@ import storage from 'redux-persist/lib/storage'
 
 import loginModalReducer from './LoginModal/LoginModal.reducer';
 import registerModalReducer from './RegisterModal/RegisterModal.reducer';
+import editTaskModalReducer from './EditTaskModal/EditTaskModal.reducer'
 import usersReducer from './Users/Users.reducer';
 import tasksReducer from './Tasks/Tasks.reducer'
-
+ 
 const rootReducer = combineReducers({
 	loginModal: loginModalReducer,
 	registerModal: registerModalReducer,
+	editTaskModal: editTaskModalReducer,
 	users: usersReducer,
 	tasks: tasksReducer,
 })

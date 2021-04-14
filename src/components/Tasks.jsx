@@ -10,11 +10,19 @@ import {
   deleteTask,
   returnTask,
 } from "../store/Tasks/Tasks.actions";
+import { EditTaskModal } from "./EditTaskModal";
+import { toggleActiveEditModal } from "../store/EditTaskModal/EditTaskModal.actions";
 
 export function Tasks() {
   const dispach = useDispatch();
   const currentUser = useSelector(selectCurrentUser);
   const allTasks = useSelector(selectAllTasks);
+
+  const [editTaskId, setEditTaskId] = useState(0);
+  const [editTaskName, setEditTaskName] = useState("");
+  const [editTaskDeliveryDate, setEditTaskDeliveryDate] = useState("");
+  const [editTaskConclusionDate, setEditTaskConclusionDate] = useState("");
+  const [editTaskIsVisible, setEditTaskIsVisible] = useState(false);
 
   const [showFinishedTasks, setShowFinishedTasks] = useState(false);
 
@@ -49,8 +57,24 @@ export function Tasks() {
     }
   }
 
+  function toggleEditModalVisibility(
+    id,
+    taskName,
+    deliveryDate,
+    conclusionDate
+  ) {
+    const editTaskData = {
+      taskId: id,
+      taskName: taskName,
+      deliveryDate: deliveryDate,
+      conclusionDate: conclusionDate,
+    };
+    dispach(toggleActiveEditModal(editTaskData));
+  }
+
   return (
     <div className={styles.tasksContainer}>
+      <EditTaskModal />
       <div className={styles.tasksHeader}>
         <a onClick={() => setShowFinishedTasks(false)}>To-Do</a>
         <p>|</p>
@@ -76,7 +100,16 @@ export function Tasks() {
             </div>
             <div className={styles.taskBoxActions}>
               <FiMaximize2 />
-              <FiEdit />
+              <FiEdit
+                onClick={() =>
+                  toggleEditModalVisibility(
+                    task.id,
+                    task.taskName,
+                    task.taskDeliveryDate,
+                    task.taskConclusionDate
+                  )
+                }
+              />
               <FiTrash onClick={() => handleDeleteTask(task.id)} />
             </div>
           </div>

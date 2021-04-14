@@ -1,0 +1,96 @@
+.editModalContainer {
+	width: 100vw;
+	height: 100vh;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	background: #090c10d2;
+
+	position: fixed;
+	left: 0;
+	top: 0;
+
+	z-index: 10;
+}
+
+.editModalBox {
+	width: 400px;
+	
+	padding: 15px;
+	background: var(--box-background);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 2px solid var(--gray-line);
+}
+
+.editModalBox svg {
+	align-self: flex-end;
+	font-size: 32px;
+	transition: 0.3s;
+	cursor: pointer;
+}
+
+.editModalBox svg:hover {
+	color: var(--text-highlight);
+}
+
+.editModalBox form{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.editModalBox form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.editModalBox form input {
+  margin-bottom: 30px;
+  outline: none;
+  padding: 5px 12px;
+  line-height: 20px;
+
+  background: var(--background);
+  color: var(--text);
+
+  border: 0.5px double var(--gray-line);
+  border-radius: 6px;
+}
+
+.editModalBox input[type="date"]::-webkit-calendar-picker-indicator {
+  background-color: var(--text);
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.editModalBox form button {
+  margin-top: 20px;
+  outline: none;
+  padding: 8px 12px;
+  line-height: 20px;
+
+  font-size: 16;
+  font-weight: 600;
+
+  background: var(--green-button);
+  color: var(--text);
+
+  border: 0.5px double rgb(170, 245, 170);
+  border-radius: 6px;
+
+  transition: 0.5s;
+}
+
+.editModalBox form button:hover {
+  filter: brightness(1.2);
+}
