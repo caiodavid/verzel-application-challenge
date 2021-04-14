@@ -1,13 +1,12 @@
+import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import styles from "../styles/components/EditTaskModal.module.css";
 import { FiX } from "react-icons/fi";
 
-import { useState } from "react";
 import { selectActiveEditTaskModal } from "../store/EditTaskModal/EditTaskModal.selectors";
 import { closeActiveEditModal } from "../store/EditTaskModal/EditTaskModal.actions";
 import { editTask } from "../store/Tasks/Tasks.actions";
-import { useEffect } from "react";
 
 export function EditTaskModal() {
   const dispach = useDispatch();
